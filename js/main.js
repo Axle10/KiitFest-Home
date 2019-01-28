@@ -61,12 +61,30 @@
 
     };
 
+    var btnInfoToggle=function(){
+        $('#eventbtn').on('click',function(event){
+            event.preventDefault();
+            $('body').toggleClass('info-is-visible');
+        });
+    };
 
    /* slick slider
     * ------------------------------------------------------ */
     var ssSlickSlider = function() {
         
         $('.home-slider').slick({
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            fade: true,
+            speed: 3000
+        });
+
+    };
+    var contentSlickSlider = function() {
+        
+        $('.content-slider').slick({
             arrows: false,
             dots: false,
             autoplay: true,
@@ -89,7 +107,7 @@
     * ------------------------------------------------------ */
     var ssFinalCountdown = function() {
 
-        var finalDate = '2020/04/07';
+        var finalDate = '2019/02/15';
 
         $('.home-content__clock').countdown(finalDate)
         .on('update.countdown finish.countdown', function(event) {
@@ -150,6 +168,7 @@
         ssPreloader();
         ssInfoToggle();
         ssSlickSlider();
+        contentSlickSlider();
         ssPlaceholder();
         ssFinalCountdown();
         ssAjaxChimp();

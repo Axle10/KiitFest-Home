@@ -29,12 +29,23 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Bootstrap -->
+  
+
     <style type="text/css">
         button:hover
         {
             background-color: #1f1f1f;
             color: white;
             border-color: #1f1f1f;
+        }
+        .event-category:hover
+        {
+            transition-property: width;
+            transition: width 2s, height 4s; 
+            transition-timing-function: ease-in;
+            transition-delay: 1s;
+             transition-duration: 2s;
         }
     </style>
 
@@ -45,8 +56,8 @@
     <!-- home
     ================================================== -->
     <main class="s-home s-home--slides">
-
-        <div class="home-slider">
+ 
+        <div class="home-slider" id="carousel">
             <div class="home-slider-img" id="sliderimg1" style="background-image: url(images/test/background2.jpg);"></div>
             <div class="home-slider-img" id="sliderimg2" style="background-image: url(images/test/background3.jpg);"></div>
             <div class="home-slider-img" id="sliderimg3" style="background-image: url(images/test/background1.jpg);"></div>
@@ -57,6 +68,7 @@
         <div class="home-content">
 
             <div class="home-logo">
+                
                 <a href="index-slides.html">
                     <img src="images/test/logo.png" alt="Homepage" style="height: 90px; width: 250px;">
                 </a>
@@ -64,24 +76,51 @@
 
             <div class="row home-content__main" id="content1">
 
-                <div class="col-eight home-content__text pull-right" style="margin-top: 30px;">
-                    <div class="content" id="slider1">
-                            <h3>Welcome to KIITFEST 5.0</h3>
+                <div class="col-seven home-content__text pull-right" style="margin-top: 30px;">
+                    <div class="content-slider" id="carousel">
+                        <div class="content-slider-content">
+                            <div class="content" id="slider1">
+                                <h3 style="text-align: right;">Welcome to KIITFEST 5.0</h3>
+                                <h1>
+                                The ANNUAL Techno Cultural Fest of KIIT
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="content-slider-content">
+                            <div class="content" id="slider2">
+                                <h3 style="text-align: right;">KIITFEST 5.0 Presents</h3>
 
-                        <h1>
-                        The ANNUAL Techno Cultural Fest of KIIT
-                        </h1>
+                                <h1>
+                                Live ARMAAN MALIK Concert on 16th February, 2019
+                                </h1>
+                            </div>
+
+                        </div>
+                        <div class="content-slider-content">
+                            <div class="content" id="slider2">
+                                <h3 style="text-align: right;">KIITFEST 5.0 Presents</h3>
+
+                                <h1>
+                                LOST STORIES DJ on 17th February, 2019
+                                </h1>
+                            </div>
+
+                        </div>
+
                     </div>
+                    
 
+                    
                     
                     <div class="home-content__subscribe" style="top: 0 !important; margin-top: 0;">
                         <button><a href="signup.php">Register</a></button>
                         <button><a href="login.php">LogIn</a></button>
-                        <button><a href="login.php">See Events</a></button>
+                        <button id="eventbtn">See Events</a></button>
                     </div>
+                    
                 </div>  <!--end home-content__text -->
  
-                <div class="col-four home-content__counter">
+                <div class="col-five home-content__counter">
                     <h3>Launching In</h3>
 
                     <div class="home-content__clock">
@@ -104,12 +143,14 @@
                             <span>S</span>
                         </div>
                     </div>  <!-- end home-content__clock -->
+                    <h2 style="color: white"> 15th Feb - 17th Feb<br> 2019 </h2>
+
 
                 </div>  <!-- end home-content__counter -->
 
             </div>  <!-- end home-content__main -->
 
-            <ul class="home-social">
+            <!-- <ul class="home-social">
                 <li>
                 <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
                 </li>
@@ -125,7 +166,7 @@
                 <li>
                 <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
                 </li>
-            </ul> <!-- end home-social -->
+            </ul>  --><!-- end home-social -->
 
             <!-- <div class="row home-copyright">
                 <span>Copyright Count 2018</span> 
@@ -136,7 +177,9 @@
            <!--  <div class="home-content__line"></div> -->
 
         </div> <!-- end home-content -->
-
+        <!-- KIIT/KISS Logo -->
+      
+      
     </main> <!-- end s-home -->
 
 
@@ -146,48 +189,71 @@
         <span class="info-menu-icon"></span>
     </a>
 
-    <div class="s-info">
-
+    <div class="s-info" id="info">
+    
         <div class="row info-wrapper">
+            
+            <a href="https://kiit.ac.in"><img class="kiitLinkLogo" src="images/test/kiitLogo.png" style="height: 110px; width: 100px; align-items: left; align-content: left; text-align: left; float: left; margin-left: 0;"></a>
+            <a href="https://kiss.ac.in"><img class="kissLinkLogo" src="images/test/kissLogo.png" style="height: 100px; width: 100px; right: 0; align-items: right; align-content: right; margin-left: 25%; float: right; text-align: right;"></a>
 
             <div class="col-seven tab-full info-main">
-                <h1>We are Count. We make awesome stuff.</h1>
+                <h1>About KIITFest</h1>
                 <p>
-                Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, 
-                eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
-                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                KIITFEST is a “Contest of Contests” that encompasses all cultural and technical events into one forum that we are about to bring forth “KIITFEST 5.0”. KIITFEST is an ever-expanding universe of glory and greatness, where fun and games meet battles and battles become wars, where we put the sparkle in the air and glitz in the land and where we make the stars shine.
                 </p>
 
                 <p>
-                Officiis nostrum adipisci minima. Enim tenetur animi ipsum a itaque temporibus necessitatibus. 
-                Dolores ad perspiciatis. Voluptatem et molestiae adipisci laboriosam assumenda. Deleniti vero 
-                labore eos repudiandae. Vel commodi tenetur ex quia. Quisque velit nisi, pretium ut lacinia in, 
-                elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.
+                This February, we aim to bring enthusiastic participation, eminent personalities and nights limed with entertainment and hysterical fun. KIITFEST has managed to attain a huge audience in the country and a participation of around 25000 students from all across the country stands a testimony to this. The techno cultural fest is packed with more than 100 events this year, with experts and dignitaries from various fields coming down to adjudicate the events.
                 </p>
+                <div class="col-lg-6 col-sm-12 embed-responsive embed-responsive-16by9 align-self-center">
+          <iframe width="700" height="300" src="https://www.youtube.com/embed/Op7SHPDHwdI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
             </div>
 
             <div class="col-four tab-full pull-right info-contact">
-
+ 
                 <div class="info-block">
-                    <h3>Start A Conversation</h3>
-                    <p>
-                        <a href="mailto:#0" class="info-email">mailus@ourwebsite.com</a><br>
-                        <a href="tel:+18587338912" class="'info-phone">+1.858.733.8912</a>
-                    </p>
-                </div>
-
-                <div class="info-block">
-                    <h3>Visit Our Office</h3>
+                    <a href="technical.php"><h3 class="event-category">TECHNICAL</h3></a><br>
+                    <a href="cultural.php"><h3 class="event-category">CULTURAL</h3></a><br>
+                    <a href="quizfest.php"><h3 class="event-category">QUIZFEST</h3></a><br>
                     
-                    <p class="info-address">
-                        1600 Amphitheatre Parkway<br>
-                        Mountain View, CA<br>
-                        94043 US
-                    </p>
+                </div>
+                <div class="info-block">
+                    <a href="webteam.php"><h3 class="event-category">WEBTEAM</h3></a>
                 </div>
 
                 <div class="info-block">
+                    
+                    <h3>CONTACT US</h3>
+                    <div class="col-md-4 col-xs-12 text-md-left text-xs-center">
+                      <h3 class="">Phone</h3>
+                      <p class="text-dark">
+                        General Info: +91 9123782010<br>
+                        Technical Support: +91 7004909759<br>
+                        Sponsorship: +91 7683979698<br>
+                      </p>
+                    </div>
+                    <div class="col-md-4 col-xs-12 text-md-center text-xs-center">
+                      <h3>Address</h3>
+                      <p class="text-dark">
+                        KIIT STUDENT ACTIVITY CENTRE,<br>
+                        KIIT Deemed to be University<br>
+                        Patia<br>
+                        Bhubaneswar - 751024
+                      </p>
+                    </div>
+                    <div class="col-md-4 col-xs-12 text-md-right text-xs-center">
+                      <h3>E-mail</h3>
+                      <p class="text-dark">kiit.fest@kiit.ac.in</p>
+                    </div>
+                    
+                </div>
+                <div class="info-block">
+                    <div class="col-md-4 col-xs-12 text-md-left text-xs-center">
+                   
+                </div></div>
+
+                <!-- <div class="info-block">
                     <h3>Find Us On</h3>
                     
                     <ul class="info-social">
@@ -213,7 +279,7 @@
                         </li>
                     </ul>
                 </div>
-                
+                 -->
             </div>  <!-- end info contact -->
 
         </div>  <!-- end info wrapper -->
@@ -235,45 +301,100 @@
         </div>
     </div>
 
+    <!-- Events Modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+            <div class="container-fluid h-100">
+              <div class="row justify-content-center align-items-center h-100">
+
+                <div class="col-md-3 col-sm-8 d-flex flex-column justify-content-center align-items-center event tech">
+                  <div id="blackTint" class="event-overlay blue"></div>
+                  <h2 class="title">Technical</h2>
+                      <p class="body">"A small step. A giant leap for mankind."</p>
+                      <p class="body"> A hub for all denizens and enthusiasts of Technology who believe that they can mould this world into a better place to be a part of. A click is what matters!</p>
+                  <a href="./technical.php"><button class="event-button" >See Events</button></a>
+                </div>
+                <div class="col-md-3 col-sm-8 d-flex flex-column justify-content-center align-items-center event cul">
+                  <div id="blackTint" class="event-overlay pink"></div>
+                  <h2 class="title">Cultural</h2>
+                      <p class="body">"Imagination and Ideas are ever-expanding and immortal."</p>
+                      <p class="body"> A cue for all aspirants who are imaginative, creative and artisans to amalgamate and be a part to. So, dance and sway to the tunes of glory. We are open.</p>
+                  <a href="./cultural.php"><button class="event-button"> See Events</button>
+        </a>        </div>
+                <div class="col-md-3 col-sm-8 d-flex flex-column justify-content-center align-items-center event quiz">
+                  <div id="blackTint" class="event-overlay yellow"></div>
+                  <h2 class="title">QuizFest</h2>
+                      <p class="body">"My mind rebels at stagnation."</p>
+                      <p class="body"> And with that witty thought in mind, your curiosity is satiated. The Quiz Carnival is back to churn your neurons with questions and answers that would determine the best. Be a part!</p>
+                  <a href="./quizfest.php"><button class="event-button">See Events</button></a>
+                </div>
+
+              </div>
+            </div>
+      </div>
+
+    </div>
+
+    <!-- End of events modal -->
+    
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+  
     <script type="text/javascript">
-        
-        var countDownDate = new Date("February 15, 2019 00:00:00").getTime();
+        // Modal js
+        // Get the modal
+var modal = document.getElementById('myModal');
 
-var x = setInterval(function() {
+// Get the button that opens the modal
+var btn = document.getElementById('btn');
 
-  var now = new Date().getTime();
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-  var distance = countDownDate - now;
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-  if (days<10){
-    days = "0"+days;
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-  if (hours<10){
-    hours = "0"+hours;
+}
+
+
+// End of modal Js
+
+$('#Carousel').slick('.home-slider', function (ev) {
+  var id = ev.relatedTarget.id;
+  switch (id) {
+    case "sliderimg1":
+      $('#sliderimg1').css("display","block");
+      break;
+    case "sliderimg2":
+      // do something the id is 2
+      break;
+    case "sliderimg3":
+      // do something the id is 3
+      break;
+    default:
+      //the id is none of the above
   }
-  if (minutes<10){
-    minutes = "0" + minutes;}
-  if (seconds<10){
-    seconds = "0" + seconds; }
-    //document.getElementById('clock-days').style.display='block';
-    document.getElementById('clock-days').innerHTML=days;
-    document.getElementById('clock-hours').innerHTML=hours;
-    document.getElementById('clock-minutes').innerHTML=minutes;
-    document.getElementById('clock-seconds').innerHTML=seconds;
+});
 
-
-}, 1000);
     </script>
 
 
